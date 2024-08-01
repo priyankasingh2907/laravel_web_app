@@ -4,8 +4,7 @@
 
 ## Screenshots
 
-![App Screenshot](https://www.youtube.com/watch?v=n8yjG6S9YRI)
-
+https://github.com/user-attachments/assets/f19a6193-e5cb-4f83-96b8-89af67c3e84c
 
 ## Demo
 
