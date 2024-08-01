@@ -1,1 +1,32 @@
 
+
+<br/><br/><br/>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+
+# Running LOCAVO
+Follow these steps to set up and run LOCAVO on your local machine:
+
+## 1. Import the Database
+1- In PHPMyAdmin, create a new database.
+
+2- Import the SQL file from the Database folder into the newly created database.
+
+
+4- Open your web browser and go to http://localhost:3000 to view the frontend.
+
+## 3. Start
+1- Open another terminal.
+
+```bash
+composer install
+```
+4- Start the backend server:
+```bash
+php artisan serve
+```
