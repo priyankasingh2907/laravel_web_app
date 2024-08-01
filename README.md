@@ -18,16 +18,6 @@ https://www.youtube.com/watch?v=n8yjG6S9YRI
 - contact
 - Cross platform
 
-  #### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
 ## Support
 
 For support, email priyanka.singh.2907.2k@gmail.com or join our youTube channel https://www.youtube.com/channel/UCmIZ3Q6s7Re7PII8-8D6E_A
@@ -64,9 +54,6 @@ Start the server
 **Client:** Laravel, composer, Css , Bootstrap , Html ,php , MYSQL
 
 **Server:** Xampp
-
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 
 ## 🔗 Links
