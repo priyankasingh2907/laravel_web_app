@@ -1,14 +1,12 @@
 
 
-<br/><br/><br/>
 
 <video width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
+  <source src="public/assets/images/laravel_web_app.mp4" type="video/mp4">
+  
 Your browser does not support the video tag.
 </video>
-
-
+<br/><br/><br/>
 # Running LOCAVO
 Follow these steps to set up and run LOCAVO on your local machine:
 
