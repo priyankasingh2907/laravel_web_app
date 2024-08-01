@@ -1,0 +1,53 @@
+******************************
+🌐 Laravel Web App 🌐
+******************************
+
+******************************
+✅ Task ➔ 2 🔶 Authenticate admin user so he can login 🔶
+******************************
+
+1) Create Database and configure .env file.
+
+2) Run migration command which will create default tables in the database. 
+   ➔ php artisan migrate
+
+3) Alter users table via migration so we could add a column called 'role', here we will define two roles    
+   'admin' and 'user'; 
+
+   php artisan alter_users_table
+   
+   UP => $table->enum('role',['user','admin'])->default('user')->after('id');
+
+   Down => $table->dropColumn('role');
+   
+   ➔ php artisan migrate
+
+4) create guards/provider for admin authentication.
+
+5) Let's create/modify "AdminAuthenticate" & "AdminRedirectIfAuthenticated" middleware for Admin    
+   Authentication.
+
+6) Now we have to register these two middlewares in Kernal.php
+
+7) Define route group in web.php
+
+8) Now we have to add "authenticate" method in "AdminLoginController"  and show validation/auth errors on   
+   login view.
+
+9) Now we have to create DashboardController, which will show dashboard page after login. Also we will create 
+   a dashboard view, which we will load in dashboard controller method.
+
+   Command to create controller 
+   
+   ➔ php artisan make:controller admin\DashboardController
+   
+   Method ➔ index
+   Blade ➔ resources/admin/dashboard.blade.php
+
+10) For admin logout we will create "logout" method in "AdminLoginController".  
+
+*****
+
+🥇 Accomplishment 🥇
+1) Admin Authentication completed successfully.
+2) Dashboard page is ready for admin panel.

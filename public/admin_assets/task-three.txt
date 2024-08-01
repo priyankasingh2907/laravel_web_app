@@ -1,0 +1,31 @@
+******************************
+🌐 Laravel Web App 🌐
+******************************
+
+******************************
+✅ Task ➔ 3 🔶 Configure All Frontend Pages 🔶
+******************************
+
+1) Download and extract frontend.zip file from my github account.
+   https://github.com/mohitsingh2006/L8-html-assets/blob/main/frontend.zip
+
+2) Create "assets" folder in public directory and paste the  css/js/images folders. These 
+   assets will be treated as frontend assets.
+
+3) Lets first define parent layout inside "layouts" folder, later it will be inherited in child layouts.
+
+4) Let's consider "Home" page first.
+   a) Create "home.blade.php" and inherit with parent layout.
+   b) Create "HomeController" and add "index" method inside HomeController, this method will load home page.
+      php artisan make:controller HomeController
+   c) Now define route for home page.
+   e) Now open "index.html" file and follow my instructions.
+
+5) Same Process will be repeated for following pages:
+   About Us, Services, Service Detail, Faq, Blog, Blog Detail, and Contact Us
+
+
+
+*****
+🥇 Accomplishment 🥇
+1) All frontend pages has been configured successfully.

@@ -1,0 +1,33 @@
+==============================
+🌐 Laravel Web App 🌐
+==============================
+
+Server Requirements
+PHP 7.3 or above
+
+Install Laravel using following command.
+composer create-project laravel/laravel:^8.0 laravel_web_app
+
+✅ Task - 1 
+// Setup admin login screen for our web app
+
+1) We are using adminLTE free theme for admin panel, so copy the assets from my github directory.
+   https://github.com/mohitsingh2006/L8-html-assets
+
+2) Extract zip file and copy assets folder to your laravel public folder. Admin assets should be under admin_assets folder.
+
+3) Create a controller called "AdminLoginController" using the command given below. 
+   php artisan make:controller admin/AdminLoginController 
+    
+   Create a view called login in follwing directory, all admin views should be inside admin folder .
+   resources\admin\login.blade.php
+
+   Now create a function called "index" inside "AdminLoginController", which will load the login screen.
+
+4) Lets create a get route inside web.php for login screen.
+
+*****
+
+🥇 Accomplishment 🥇
+1) Laravel installation completed
+2) Admin login UI created successfully.

@@ -1,0 +1,115 @@
+************************************************************
+*               🌐 Laravel Web App 🌐                     * 
+************************************************************
+
+************************************************************
+✅ Task ➔ 4 🔶 Create Services Module in Admin Panel 🔶
+                 ✅ Create Service Section 
+                 ✅ List Services with pagination.
+                 ✅ Edit Service
+                 ✅ Delete Service
+************************************************************
+
+Note: We will use ajax to save form data so you must know how ajax works. 
+      If you don't know, don't worry, I'll show a very easy process of how ajax works.
+
+0) Load common scripts
+   a) We will use "summernote" as a text editor, so we have to include its js file and initialize it in the footer.
+   b) We will use dropzone as an ajax file uploader, so we have to include its js file.
+   c) During image upload we will generate thumbnails so we will use a library called "Image Intervention".
+
+      https://image.intervention.io/v2/introduction/installation
+      
+      👉🏻 composer require intervention/image
+
+      In the $providers array add the service providers for this package.
+      Intervention\Image\ImageServiceProvider::class
+
+      Add the facade of this package to the $aliases array.
+      'Image' => Intervention\Image\Facades\Image::class
+
+
+1) Create a Controller named "ServiceController" using the following artisan command.
+   👉🏻 php artisan make:controller admin\ServiceController
+   
+   Let's create six methods inside ServiceController
+   a) index => This method will show the services.
+   b) create => This method will display create service form.
+   c) save => This method will insert service in database
+   d) edit => This method will show, a service edit form where you can update an existing service.
+   e) update => This method will update the service in DB.
+   f) delete => This method will delete a service from DB.
+
+2) First we will work on create service section, so we have to create a form.
+   a) create a blade named "create.blade.php" in the following location.
+      resources\views\admin\services\create.blade.php
+   b) Let's create service form with dropzone upload field.
+   
+3) Create a controller called "TempImageController"
+   This controller will be linked with dropzone and it will temproary save images.
+   a) create "uploads" folder inside public directory
+   b) create "temp" folder inside uploads directory
+   c) create "temp_files" table in database.
+   d) create "TempFile" model
+
+4) Inside "TempImageController" create a method named "upload", this method will upload
+   temp images and save a temp record in DB.
+
+5) Create following folder inside public folder
+   services/thumb/large => 1150 Maintain aspect ratio
+   services/thumb/small => 360X220 Strict
+
+6) Now validate and save service in DB using "ServiceController".
+
+List *******
+
+7) First we will create a blade called 'list.blade.php' which will show all services.
+   resources/views/admin/services/list.blade.php
+
+8) In "index" method of "ServiceController" we will fetch all services and pass to "list" view.
+
+9) In "list" view will use foreach loop to list all services.
+
+10) To show pagination we will use the following code.
+   {{ $resultArray->links('pagination::bootstrap-4') }}
+
+Edit *******
+
+11) In listing page we will create a link which will redirect us to edit service page. In "edit" method we  
+    will fetch the data of specfic service clicked data and will load on "edit" form.
+
+12) Let's create route to show the edit service page, and this route will be linked with "edit"   
+    method of  of ServiceController.
+
+13) Create a blade called "edit.blade.php" and load in edit method of "ServiceController".
+    resources\views\admin\services\edit.blade.php
+
+14) Copy the code of "create.blade.php" and paste in "edit.blade.php".
+
+15) Now, we have to validate the form and update data in DB. We will use "update" method of     
+    "ServiceController" to validate and update data in DB. 
+
+*****
+Delete a service
+
+16) In listing page when user will click on delete icon, we will show a javascript confirm alert, if user   click on Yes, then we will delete the record from DB.
+
+17) Here we will use "delete" method to delete a record.
+
+*****
+🥇 Accomplishment 🥇
+1) You have successfully completed Create Service module.
+   a) How to install and configure a library (Image Intervention).
+   b) Usage of dropzone in Laravel (Ajax File Upload).
+   c) How to save a record in DB.
+   d) How to create & validate a form.
+   ***************
+
+   List ****
+   e) We successfully listed the services.
+   f) We got an idea about how to use pagination in laravel.
+   g) We got an idea, how to edit a record in Laravel.
+
+   Edit ****
+   h) How to update an existing record in DB.
+   
